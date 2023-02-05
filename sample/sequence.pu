@@ -1,0 +1,19 @@
+@startuml
+participant Alice
+participant Bob
+participant Carsol
+
+activate Alice
+Alice -> Bob:createBob()
+ref over Alice, Bob: ボブを作成
+
+activate Bob
+Bob -> Bob: Confirm()
+activate Bob
+Bob -> Carsol: fetchCarsol()
+Bob <-- Carsol: 
+
+activate Carsol
+Bob -> Carsol:createCarsol()
+
+@enduml
